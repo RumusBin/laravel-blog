@@ -24,6 +24,9 @@
                         :sub_title="value.sub_title"
                         :created_at="value.created_at"
                         :key="value.index"
+                        :post-id="value.id"
+                        login = "{{Auth::check()}}"
+                        :likes =  value.likes.length
                 >
                 </Posts>
 

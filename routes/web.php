@@ -18,6 +18,7 @@ Route::group(['namespace'=>'User'], function (){
     Route::get('post/category/{category}', 'HomeController@category')->name('category');
     //Vue routes
     Route::post('getPosts', 'PostController@getAllPosts');
+    Route::post('saveLike', 'PostController@saveLike');
 });
 
 Route::get('/home', 'HomeController@index');

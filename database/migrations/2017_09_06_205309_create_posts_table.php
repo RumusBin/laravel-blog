@@ -22,8 +22,6 @@ class CreatePostsTable extends Migration
             $table->boolean('status')->nullable();
             $table->integer('posted_by')->nullable();
             $table->string('image', 255);
-            $table->integer('likes')->nullable();
-            $table->integer('dislikes')->nullable();
             $table->timestamps();
         });
     }
