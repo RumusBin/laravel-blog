@@ -39,7 +39,11 @@
                         id : this.postId
                     }).then(
                         response => {
-                            this.likeCount += 1;
+                            if(response.data == 'deleted'){
+                                this.likeCount -= 1;
+                            }else{
+                                this.likeCount += 1;
+                            }
                         }
                     ).catch();
                 }else{

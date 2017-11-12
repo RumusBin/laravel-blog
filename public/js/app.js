@@ -42772,7 +42772,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 axios.post('/saveLike', {
                     id: this.postId
                 }).then(function (response) {
-                    _this.likeCount += 1;
+                    if (response.data == 'deleted') {
+                        _this.likeCount -= 1;
+                    } else {
+                        _this.likeCount += 1;
+                    }
                 }).catch();
             } else {
                 window.location = 'login';
